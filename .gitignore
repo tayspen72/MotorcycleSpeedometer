@@ -1,0 +1,6 @@
+# Don't track all of the Rust build or VS-Code config files
+# Files to maintain removed 
+MotorcycleSpeedometer-MCU-Rust/target
+MotorcycleSpeedometer-MCU-Rust/Cargo.lock
+MotorcycleSpeedometer-MCUz-Rust/.vscode
+
