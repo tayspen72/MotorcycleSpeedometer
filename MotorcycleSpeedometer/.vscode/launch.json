@@ -1,0 +1,38 @@
+{
+	/* 
+	 * Requires the Rust Language Server (RLS) and Cortex-Debug extensions
+	 * https://marketplace.visualstudio.com/items?itemName=rust-lang.rust
+	 * https://marketplace.visualstudio.com/items?itemName=marus25.cortex-debug
+	 */
+	 "configurations": [
+		{
+			"name": "Remote Debug (OpenOCD)",
+			"type": "gdb",
+			"request": "launch",
+			"cwd": "${workspaceRoot}",
+			"target": "${workspaceRoot}/target/thumbv7em-none-eabihf/debug/app", 
+			"gdbpath" : "arm-none-eabi-gdb",
+			"autorun": [
+				"source -v openocd.gdb",
+			],
+		},
+		{
+			"name": "Cortex Debug (OpenOCD)",
+			"type": "cortex-debug",
+			"request": "launch",
+			"cwd": "${workspaceRoot}",
+			"device": "msp432p401r",
+			"executable": "${workspaceRoot}/target/thumbv7em-none-eabihf/debug/app", 
+			"interface": "jtag",
+			"postLaunchCommands": [
+				"monitor arm semihosting enable",
+			],
+			"runToMain": true,
+			"servertype": "openocd",
+			"svdFile": "./MSP432P401R.svd",
+			"configFiles": [
+				"./openocd.cfg"
+			],
+		}
+	]
+}

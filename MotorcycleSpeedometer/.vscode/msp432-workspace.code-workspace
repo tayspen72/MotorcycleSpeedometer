@@ -1,0 +1,11 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		},
+		{
+			"path": "../../msp432p401r-pac"
+		}
+	],
+	"settings": {}
+}
