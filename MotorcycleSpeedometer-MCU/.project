@@ -47,7 +47,7 @@
 		<link>
 			<name>FreeRTOS/port.c</name>
 			<type>1</type>
-			<locationURI>WORKSPACE_LOC/CampChef-Embedded-Libraries/FreeRTOS/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c</locationURI>
+			<locationURI>WORKSPACE_LOC/CampChef-Embedded-Libraries/FreeRTOS/FreeRTOS/Source/portable/GCC/ARM_CM3/port.c</locationURI>
 		</link>
 		<link>
 			<name>FreeRTOS/queue.c</name>
@@ -65,29 +65,29 @@
 			<locationURI>WORKSPACE_LOC/CampChef-Embedded-Libraries/FreeRTOS/FreeRTOS/Source/timers.c</locationURI>
 		</link>
 		<link>
-			<name>STM32CubeF3/STM32F3xx_HAL_Driver</name>
+			<name>STM32CubeF1/STM32F1xx_HAL_Driver</name>
 			<type>2</type>
-			<locationURI>WORKSPACE_LOC/CampChef-Embedded-Libraries/Mcu/STM32CubeF3/Drivers/STM32F3xx_HAL_Driver</locationURI>
+			<locationURI>WORKSPACE_LOC/CampChef-Embedded-Libraries/Mcu/STM32CubeF1/Drivers/STM32F1xx_HAL_Driver</locationURI>
 		</link>
 		<link>
-			<name>STM32CubeF3/stm32f303xe.h</name>
+			<name>STM32CubeF1/stm32f103xg.h</name>
 			<type>1</type>
-			<locationURI>WORKSPACE_LOC/CampChef-Embedded-Libraries/Mcu/STM32CubeF3/Drivers/CMSIS/Device/ST/STM32F3xx/Include/stm32f303xe.h</locationURI>
+			<locationURI>WORKSPACE_LOC/CampChef-Embedded-Libraries/Mcu/STM32CubeF1/Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xg.h</locationURI>
 		</link>
 		<link>
-			<name>STM32CubeF3/stm32f3xx.h</name>
+			<name>STM32CubeF1/stm32f1xx.h</name>
 			<type>1</type>
-			<locationURI>WORKSPACE_LOC/CampChef-Embedded-Libraries/Mcu/STM32CubeF3/Drivers/CMSIS/Device/ST/STM32F3xx/Include/stm32f3xx.h</locationURI>
+			<locationURI>WORKSPACE_LOC/CampChef-Embedded-Libraries/Mcu/STM32CubeF1/Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h</locationURI>
 		</link>
 		<link>
-			<name>startup/startup_stm32f303xe.s</name>
+			<name>startup/startup_stm32f103xg.s</name>
 			<type>1</type>
-			<locationURI>WORKSPACE_LOC/CampChef-Embedded-Libraries/Mcu/STM32CubeF3/Drivers/CMSIS/Device/ST/STM32F3xx/Source/Templates/gcc/startup_stm32f303xe.s</locationURI>
+			<locationURI>WORKSPACE_LOC/CampChef-Embedded-Libraries/Mcu/STM32CubeF1/Drivers/CMSIS/Device/ST/STM32F1xx/Source/Templates/gcc/startup_stm32f103xg.s</locationURI>
 		</link>
 		<link>
-			<name>startup/system_stm32f3xx.c</name>
+			<name>startup/system_stm32f1xx.c</name>
 			<type>1</type>
-			<locationURI>WORKSPACE_LOC/CampChef-Embedded-Libraries/Mcu/STM32CubeF3/Drivers/CMSIS/Device/ST/STM32F3xx/Source/Templates/system_stm32f3xx.c</locationURI>
+			<locationURI>WORKSPACE_LOC/CampChef-Embedded-Libraries/Mcu/STM32CubeF1/Drivers/CMSIS/Device/ST/STM32F1xx/Source/Templates/system_stm32f1xx.c</locationURI>
 		</link>
 	</linkedResources>
 </projectDescription>

@@ -3,11 +3,8 @@
  * Copyright (C) 2022, All rights reserved.
  *
  * controls
- *   display.h
+ *   led.c
  */
-
-#ifndef DISPLAY_HAL_H_
-#define DISPLAY_HAL_H_
 
 //==============================================================================
 // Notes
@@ -17,7 +14,14 @@
 //==============================================================================
 // Includes
 //==============================================================================
-#include "lvgl.h"
+#include "config.h"
+#include "led.h"
+
+#include "FreeRTOS.h"
+#include "task.h"
+
+#include "stm32f1xx_hal_gpio.h"
+#include "stm32f1xx_hal_rcc.h"
 
 //==============================================================================
 // Definitions
@@ -32,12 +36,7 @@
 //==============================================================================
 // Function Prototypes
 //==============================================================================
-// HAL
-void Display_HalReset(void);
-void Display_HalSetBacklight(uint8_t isOn);
-
-// Core
-void Display_TaskHandler(void* p);
+static void led_init(void);
 
 //==============================================================================
 // Variables
@@ -45,8 +44,44 @@ void Display_TaskHandler(void* p);
 
 
 //==============================================================================
-// Macro Functions
+// Public Functions
 //==============================================================================
 
 
-#endif /* display.h */
+//==============================================================================
+// Private Functions
+//==============================================================================
+void led_init() {
+	// Initialize GPIO pin
+	LED_CLOCK_ENABLE();
+
+	GPIO_InitTypeDef gpio = (GPIO_InitTypeDef) {
+		.Pin = 1 << LED_PIN,
+		.Mode = GPIO_MODE_OUTPUT_PP,
+		.Speed = GPIO_SPEED_HIGH
+	};
+	HAL_GPIO_Init(LED_PORT, &gpio);
+
+	HAL_GPIO_WritePin(LED_PORT, 1 << LED_PIN, GPIO_PIN_RESET);
+
+}
+
+//==============================================================================
+// Task Handler
+//==============================================================================
+void Led_TaskHandler(void* p) {
+	led_init();
+
+	TickType_t lastWakeTime = xTaskGetTickCount();
+
+	while(1) {
+		vTaskDelayUntil(&lastWakeTime, pdMS_TO_TICKS(1000));
+
+		HAL_GPIO_TogglePin(LED_PORT, 1 << LED_PIN);
+	}
+}
+
+//==============================================================================
+// Interrupt
+//==============================================================================
+

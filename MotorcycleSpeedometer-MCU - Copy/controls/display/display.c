@@ -22,9 +22,8 @@
 #include "task.h"
 
 // LVGL: Lightweight Versatile Graphics Library
-#include "lvgl.h"
+//#include "lvgl.h"
 
-#include "stm32f103xg.h"
 #include "stm32f1xx_hal_dma.h"
 #include "stm32f1xx_hal_gpio.h"
 #include "stm32f1xx_hal_gpio_ex.h"
@@ -256,6 +255,7 @@ static void display_halInitExternalBus(void) {
 			.ExtendedMode = FSMC_EXTENDED_MODE_DISABLE,
 			.AsynchronousWait = FSMC_ASYNCHRONOUS_WAIT_DISABLE,
 			.WriteBurst = FSMC_WRITE_BURST_DISABLE,
+			.ContinuousClock = FSMC_CONTINUOUS_CLOCK_SYNC_ONLY,
 		},
 		.hdma = &_dmaHandle,
 	};
@@ -290,6 +290,7 @@ static void display_halInitExternalBus(void) {
 			.ExtendedMode = FSMC_EXTENDED_MODE_DISABLE,
 			.AsynchronousWait = FSMC_ASYNCHRONOUS_WAIT_DISABLE,
 			.WriteBurst = FSMC_WRITE_BURST_DISABLE,
+			.ContinuousClock = FSMC_CONTINUOUS_CLOCK_SYNC_ONLY,
 		}
 	};
 	timing = (FSMC_NORSRAM_TimingTypeDef) {
@@ -328,6 +329,7 @@ static void display_halInitGpio(void) {
 	GPIO_InitTypeDef gpio = {
 		.Mode = GPIO_MODE_AF_PP,
 		.Speed = GPIO_SPEED_FREQ_HIGH,
+		.Alternate = GPIO_AF12_FSMC,
 	};
 
 	__HAL_RCC_GPIOA_CLK_ENABLE();
@@ -446,7 +448,6 @@ void Display_TaskHandler(void* p) {
 	lv_obj_t* label = lv_label_create(main);
 	lv_label_set_text(label,  "Hello world!");
 	lv_obj_center(label);
-	lv_timer_handler();
 
 	TickType_t lastWakeTime = xTaskGetTickCount();
 
