@@ -4,5 +4,8 @@
 		"bluetooth.h": "c",
 		"gpio.h": "c",
 		"kernel.h": "c"
-	}
+	},
+	"nrf-connect.applications": [
+		"${workspaceFolder}"
+	]
 }

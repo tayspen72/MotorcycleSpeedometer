@@ -63,7 +63,7 @@ int Ui_Start() {
 static void ui_handler(void* args) {
 
 	while(1) {
-		k_sleep_ms(1000);
+		k_msleep(1000);
 	}
 }
 
