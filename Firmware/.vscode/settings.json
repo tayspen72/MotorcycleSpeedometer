@@ -1,0 +1,8 @@
+{
+	"files.associations": {
+		"subject.h": "c",
+		"bluetooth.h": "c",
+		"gpio.h": "c",
+		"kernel.h": "c"
+	}
+}
