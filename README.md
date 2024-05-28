@@ -1,8 +1,17 @@
 # `Motorcycle Speedometer`
 
-> This is the full implementation of the motorcycle speedometer custom replacement project
+The motorcycle speedometer project is meant to be a full functional replacement for the speedometer and instrument panel for the 2001 Sukuki VL1500 Intruder speedometer assembly. For this model, the assembly includes:
+* Speedometer
+* Odometer and Trip Meter
+* High-beam indicator
+* Fuel Level
+* Left/Right Turn indicator
+* Neutral indicator
+* Oil pressure indicator
 
-This project includes (when finished...): 
-* PCB schematic and layout design files
-* A C implementation
-* A Rust implementation
+Because of other connections and available info, the project also includes:
+* Battery voltage
+* Speedometer assembly temperature
+* Run time / clock
+* Bluetooth connection for calibration and time adjustment
+
