@@ -1,10 +1,3 @@
-/*
- * Camp Chef
- * Copyright (C) 2024, All rights reserved.
- * 
- * Bluetooth.h
- */
-
 #ifndef BLUETOOTH_H_
 #define BLUETOOTH_H_
 

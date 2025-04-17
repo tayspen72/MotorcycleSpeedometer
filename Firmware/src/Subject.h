@@ -1,10 +1,3 @@
-/*
- * Camp Chef
- * Copyright (C) 2024, All rights reserved.
- * 
- * Subject.h
- */
-
 #ifndef SUBJECT_H_
 #define SUBJECT_H_
 

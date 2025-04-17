@@ -1,10 +1,3 @@
-/*
- * Camp Chef
- * Copyright (C) 2024, All rights reserved.
- * 
- * Ui.h
- */
-
 #ifndef UI_H_
 #define UI_H_
 
@@ -44,4 +37,8 @@ int Ui_Start();
 //==============================================================================
 
 
+<<<<<<< HEAD
 #endif /* Ui.h */
+=======
+#endif /* Ui.h */
+>>>>>>> 4bad30e (Updated framework for nrf project)

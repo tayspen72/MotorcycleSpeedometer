@@ -1,10 +1,3 @@
-/*
- * Camp Chef
- * Copyright (C) 2024, All rights reserved.
- * 
- * Heartbeat.h
- */
-
 #ifndef HEARTBEAT_H_
 #define HEARTBEAT_H_
 

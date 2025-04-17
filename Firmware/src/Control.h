@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /*
  * Camp Chef
  * Copyright (C) 2024, All rights reserved.
@@ -5,6 +6,8 @@
  * Control.h
  */
 
+=======
+>>>>>>> 4bad30e (Updated framework for nrf project)
 #ifndef CONTROL_H_
 #define CONTROL_H_
 
@@ -44,4 +47,8 @@ int Control_Start();
 //==============================================================================
 
 
+<<<<<<< HEAD
 #endif /* Control.h */
+=======
+#endif /* Control.h */
+>>>>>>> 4bad30e (Updated framework for nrf project)

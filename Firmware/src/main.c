@@ -1,10 +1,3 @@
-/*
- * Camp Chef
- * Copyright (C) 2024, All rights reserved.
- *
- * main.c
- */
-
 //==============================================================================
 // Notes
 //==============================================================================
@@ -49,13 +42,13 @@ int main() {
 	Bluetooth_Init();
 	Control_Init();
 	Heartbeat_Init();
-	Ui_Init();
+	// Ui_Init();
 
 	Subject_Start();
 	Bluetooth_Start();
 	Control_Start();
 	Heartbeat_Start();
-	Ui_Start();
+	// Ui_Start();
 }
 
 //==============================================================================
