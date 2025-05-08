@@ -37,8 +37,4 @@ int Ui_Start();
 //==============================================================================
 
 
-<<<<<<< HEAD
 #endif /* Ui.h */
-=======
-#endif /* Ui.h */
->>>>>>> 4bad30e (Updated framework for nrf project)
